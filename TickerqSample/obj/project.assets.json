@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {
+    "net9.0": {
       "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
@@ -5441,7 +5441,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0": [
+    "net9.0": [
       "Microsoft.AspNetCore.OpenApi >= 8.0.21",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.21",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.21",
@@ -5453,29 +5453,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\h.ghasemi\\.nuget\\packages\\": {}
+    "/Users/husseinghasemi/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Code Samples\\TickerqSample\\TickerqSample\\TickerqSample.csproj",
+      "projectUniqueName": "/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSample/TickerqSample.csproj",
       "projectName": "TickerqSample",
-      "projectPath": "D:\\Code Samples\\TickerqSample\\TickerqSample\\TickerqSample.csproj",
-      "packagesPath": "C:\\Users\\h.ghasemi\\.nuget\\packages\\",
-      "outputPath": "D:\\Code Samples\\TickerqSample\\TickerqSample\\obj\\",
+      "projectPath": "/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSample/TickerqSample.csproj",
+      "packagesPath": "/Users/husseinghasemi/.nuget/packages/",
+      "outputPath": "/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSample/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\h.ghasemi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/husseinghasemi/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net9.0"
       ],
       "sources": {
+        "/Users/husseinghasemi/Documents/Programming/Vira/LocalNugetFeed": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "projectReferences": {}
         }
       },
@@ -5488,11 +5489,12 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
+      "net9.0": {
+        "targetAlias": "net9.0",
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
@@ -5548,7 +5550,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\h.ghasemi\\.dotnet\\sdk\\8.0.415/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

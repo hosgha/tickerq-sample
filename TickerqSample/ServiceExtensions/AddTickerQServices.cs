@@ -28,6 +28,7 @@ public static class TickerQServiceExtensions
                     var cs = configuration.GetConnectionString("TickerQ");
                     optionsBuilder.UseSqlServer(cs, sql =>
                     {
+                        sql.MigrationsAssembly("TickerqSample");
                         sql.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
                         sql.CommandTimeout(60);
                         sql.MigrationsHistoryTable("__TickerQMigrationsHistory", "ticker");

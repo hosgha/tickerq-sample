@@ -18,11 +18,9 @@ public class JobRegistrationService(
     {
         try
         {
-            foreach (var timeTickerEntity in TimeBasedJobs.GetJobs()) 
-                await timeManager.AddAsync(timeTickerEntity);
-                
-            foreach (var cronTickerEntity in CronBasedJobs.GetJobs()) 
-                await cronManager.AddAsync(cronTickerEntity);
+                await timeManager.AddAsync(new TimeTickerEntity {Function = JobSchedulerConstants.TimeJobs.TimeBasedJobTest, ExecutionTime = DateTime.UtcNow.AddSeconds(5)});
+            
+                await cronManager.AddAsync(new CronTickerEntity {Function = JobSchedulerConstants.CronJobs.CronBasedJobTest, Expression = JobSchedulerConstants.DefaultCron.EveryMinute});
 
             Console.WriteLine("✅ TickerQ jobs registered successfully");
         }
