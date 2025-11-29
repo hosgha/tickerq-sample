@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = TickerqSourceGenerator
+build_property.ProjectDir = /Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

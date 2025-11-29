@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TickerqSample")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66a52a45a53ebfc4ab4fd88fac3e1ff5dc210315")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3bf72e89b4e20f7d5e7d6acdbe9757917431752c")]
 [assembly: System.Reflection.AssemblyProductAttribute("TickerqSample")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TickerqSample")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

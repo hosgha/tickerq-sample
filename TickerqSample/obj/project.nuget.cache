@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CrjIj5W4Lhw=",
+  "dgSpecHash": "c889VP4WuVk=",
   "success": true,
   "projectFilePath": "/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSample/TickerqSample.csproj",
   "expectedPackageFiles": [
@@ -10,9 +10,9 @@
     "/Users/husseinghasemi/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/husseinghasemi/.nuget/packages/microsoft.aspnetcore.openapi/8.0.21/microsoft.aspnetcore.openapi.8.0.21.nupkg.sha512",
     "/Users/husseinghasemi/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
-    "/Users/husseinghasemi/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.3/microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
-    "/Users/husseinghasemi/.nuget/packages/microsoft.codeanalysis.common/4.5.0/microsoft.codeanalysis.common.4.5.0.nupkg.sha512",
-    "/Users/husseinghasemi/.nuget/packages/microsoft.codeanalysis.csharp/4.5.0/microsoft.codeanalysis.csharp.4.5.0.nupkg.sha512",
+    "/Users/husseinghasemi/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.4/microsoft.codeanalysis.analyzers.3.3.4.nupkg.sha512",
+    "/Users/husseinghasemi/.nuget/packages/microsoft.codeanalysis.common/4.8.0/microsoft.codeanalysis.common.4.8.0.nupkg.sha512",
+    "/Users/husseinghasemi/.nuget/packages/microsoft.codeanalysis.csharp/4.8.0/microsoft.codeanalysis.csharp.4.8.0.nupkg.sha512",
     "/Users/husseinghasemi/.nuget/packages/microsoft.codeanalysis.csharp.workspaces/4.5.0/microsoft.codeanalysis.csharp.workspaces.4.5.0.nupkg.sha512",
     "/Users/husseinghasemi/.nuget/packages/microsoft.codeanalysis.workspaces.common/4.5.0/microsoft.codeanalysis.workspaces.common.4.5.0.nupkg.sha512",
     "/Users/husseinghasemi/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
@@ -58,7 +58,7 @@
     "/Users/husseinghasemi/.nuget/packages/system.clientmodel/1.0.0/system.clientmodel.1.0.0.nupkg.sha512",
     "/Users/husseinghasemi/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",
     "/Users/husseinghasemi/.nuget/packages/system.collections/4.0.11/system.collections.4.0.11.nupkg.sha512",
-    "/Users/husseinghasemi/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
+    "/Users/husseinghasemi/.nuget/packages/system.collections.immutable/7.0.0/system.collections.immutable.7.0.0.nupkg.sha512",
     "/Users/husseinghasemi/.nuget/packages/system.composition/6.0.0/system.composition.6.0.0.nupkg.sha512",
     "/Users/husseinghasemi/.nuget/packages/system.composition.attributedmodel/6.0.0/system.composition.attributedmodel.6.0.0.nupkg.sha512",
     "/Users/husseinghasemi/.nuget/packages/system.composition.convention/6.0.0/system.composition.convention.6.0.0.nupkg.sha512",
@@ -79,7 +79,7 @@
     "/Users/husseinghasemi/.nuget/packages/system.net.primitives/4.0.11/system.net.primitives.4.0.11.nupkg.sha512",
     "/Users/husseinghasemi/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/Users/husseinghasemi/.nuget/packages/system.reflection/4.1.0/system.reflection.4.1.0.nupkg.sha512",
-    "/Users/husseinghasemi/.nuget/packages/system.reflection.metadata/6.0.1/system.reflection.metadata.6.0.1.nupkg.sha512",
+    "/Users/husseinghasemi/.nuget/packages/system.reflection.metadata/7.0.0/system.reflection.metadata.7.0.0.nupkg.sha512",
     "/Users/husseinghasemi/.nuget/packages/system.reflection.primitives/4.0.1/system.reflection.primitives.4.0.1.nupkg.sha512",
     "/Users/husseinghasemi/.nuget/packages/system.resources.resourcemanager/4.0.1/system.resources.resourcemanager.4.0.1.nupkg.sha512",
     "/Users/husseinghasemi/.nuget/packages/system.runtime/4.3.0/system.runtime.4.3.0.nupkg.sha512",
@@ -102,7 +102,41 @@
     "/Users/husseinghasemi/.nuget/packages/tickerq/8.0.0-beta.10/tickerq.8.0.0-beta.10.nupkg.sha512",
     "/Users/husseinghasemi/.nuget/packages/tickerq.dashboard/8.0.0-beta.10/tickerq.dashboard.8.0.0-beta.10.nupkg.sha512",
     "/Users/husseinghasemi/.nuget/packages/tickerq.entityframeworkcore/8.0.0-beta.10/tickerq.entityframeworkcore.8.0.0-beta.10.nupkg.sha512",
-    "/Users/husseinghasemi/.nuget/packages/tickerq.utilities/8.0.0-beta.10/tickerq.utilities.8.0.0-beta.10.nupkg.sha512"
+    "/Users/husseinghasemi/.nuget/packages/tickerq.utilities/8.0.0-beta.10/tickerq.utilities.8.0.0-beta.10.nupkg.sha512",
+    "/Users/husseinghasemi/.nuget/packages/microsoft.netcore.app.ref/8.0.20/microsoft.netcore.app.ref.8.0.20.nupkg.sha512",
+    "/Users/husseinghasemi/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.20/microsoft.aspnetcore.app.ref.8.0.20.nupkg.sha512",
+    "/Users/husseinghasemi/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.20/microsoft.netcore.app.host.osx-arm64.8.0.20.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Workspaces 4.5.0 requires Microsoft.CodeAnalysis.Common (= 4.5.0) but version Microsoft.CodeAnalysis.Common 4.8.0 was resolved.",
+      "libraryId": "Microsoft.CodeAnalysis.Common",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Workspaces 4.5.0 requires Microsoft.CodeAnalysis.CSharp (= 4.5.0) but version Microsoft.CodeAnalysis.CSharp 4.8.0 was resolved.",
+      "libraryId": "Microsoft.CodeAnalysis.CSharp",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.Workspaces.Common 4.5.0 requires Microsoft.CodeAnalysis.Common (= 4.5.0) but version Microsoft.CodeAnalysis.Common 4.8.0 was resolved.",
+      "libraryId": "Microsoft.CodeAnalysis.Common",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

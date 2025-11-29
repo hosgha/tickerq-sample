@@ -1,0 +1,6 @@
+/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.1/TickerqSourceGenerator.csproj.AssemblyReference.cache
+/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.1/TickerqSourceGenerator.GeneratedMSBuildEditorConfig.editorconfig
+/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.1/TickerqSourceGenerator.AssemblyInfoInputs.cache
+/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.1/TickerqSourceGenerator.AssemblyInfo.cs
+/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.1/TickerqSourceGenerator.csproj.CoreCompileInputs.cache
+/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.1/TickerqSourceGenerator.sourcelink.json
