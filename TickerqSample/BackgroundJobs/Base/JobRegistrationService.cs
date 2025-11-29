@@ -11,24 +11,18 @@ public interface IJobRegistrationService
     Task RegisterJobsAsync();
 }
 
-public partial class JobRegistrationService : IJobRegistrationService
+public partial class JobRegistrationService(
+    ITimeTickerManager<TimeTickerEntity> timeManager,
+    ICronTickerManager<CronTickerEntity> cronManager)
+    : IJobRegistrationService
 {
-    private readonly ITimeTickerManager<TimeTickerEntity> _timeManager;
-
-    public JobRegistrationService(
-        ITimeTickerManager<TimeTickerEntity> timeManager,
-        ICronTickerManager<CronTickerEntity> cronManager)
-    {
-        _timeManager = timeManager;
-    }
-
     public Task RegisterJobsAsync()
     {
-        RegisterTimeJobs(_timeManager);
+        RegisterJobs(timeManager, cronManager);
 
         Console.WriteLine("Time-based jobs registration triggered.");
         return Task.CompletedTask;
     }
     
-    partial void RegisterTimeJobs(ITimeTickerManager<TimeTickerEntity> timeManager);
+    partial void RegisterJobs(ITimeTickerManager<TimeTickerEntity> timeManager, ICronTickerManager<CronTickerEntity> cronManager);
 }

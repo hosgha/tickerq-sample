@@ -1,26 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/TickerqSourceGenerator.csproj": {}
+    "D:\\Code Samples\\tickerq-sample\\TickerqSourceGenerator\\TickerqSourceGenerator.csproj": {}
   },
   "projects": {
-    "/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/TickerqSourceGenerator.csproj": {
+    "D:\\Code Samples\\tickerq-sample\\TickerqSourceGenerator\\TickerqSourceGenerator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/TickerqSourceGenerator.csproj",
+        "projectUniqueName": "D:\\Code Samples\\tickerq-sample\\TickerqSourceGenerator\\TickerqSourceGenerator.csproj",
         "projectName": "TickerqSourceGenerator",
-        "projectPath": "/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/TickerqSourceGenerator.csproj",
-        "packagesPath": "/Users/husseinghasemi/.nuget/packages/",
-        "outputPath": "/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/obj/",
+        "projectPath": "D:\\Code Samples\\tickerq-sample\\TickerqSourceGenerator\\TickerqSourceGenerator.csproj",
+        "packagesPath": "C:\\Users\\h.ghasemi\\.nuget\\packages\\",
+        "outputPath": "D:\\Code Samples\\tickerq-sample\\TickerqSourceGenerator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/husseinghasemi/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\h.ghasemi\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "/Users/husseinghasemi/Documents/Programming/Vira/LocalNugetFeed": {},
+          "D:\\Projects\\DevExpress-23.1.6-nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,15 +39,21 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
-            "Microsoft.CodeAnalysis.CSharp": {
+            "Microsoft.CodeAnalysis": {
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[4.5.0, )"
+              "version": "[4.8.0, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.8.0, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -67,7 +73,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.305/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
