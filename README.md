@@ -9,8 +9,6 @@ This source generator removes that friction by scanning your code at compile tim
 
 It introduces **time-based scheduling attributes** and generates the required job registration code behind the scenes.
 
-👉 **Example project**: [`tickerq-sample`](https://github.com/hosgha/tickerq-sample)
-
 ## 🚀 Features
 
 - 🟢 **Auto-registration** of time-based jobs (`OffsetSeconds` / `ExecutionTime`)
