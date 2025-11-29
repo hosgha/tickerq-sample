@@ -1,11 +1,22 @@
-D:\Code Samples\tickerq-sample\TickerqSourceGenerator\bin\Debug\netstandard2.0\TickerqSourceGenerator.deps.json
-D:\Code Samples\tickerq-sample\TickerqSourceGenerator\bin\Debug\netstandard2.0\TickerqSourceGenerator.dll
-D:\Code Samples\tickerq-sample\TickerqSourceGenerator\bin\Debug\netstandard2.0\TickerqSourceGenerator.pdb
-D:\Code Samples\tickerq-sample\TickerqSourceGenerator\obj\Debug\netstandard2.0\TickerqSourceGenerator.csproj.AssemblyReference.cache
-D:\Code Samples\tickerq-sample\TickerqSourceGenerator\obj\Debug\netstandard2.0\TickerqSourceGenerator.GeneratedMSBuildEditorConfig.editorconfig
-D:\Code Samples\tickerq-sample\TickerqSourceGenerator\obj\Debug\netstandard2.0\TickerqSourceGenerator.AssemblyInfoInputs.cache
-D:\Code Samples\tickerq-sample\TickerqSourceGenerator\obj\Debug\netstandard2.0\TickerqSourceGenerator.AssemblyInfo.cs
-D:\Code Samples\tickerq-sample\TickerqSourceGenerator\obj\Debug\netstandard2.0\TickerqSourceGenerator.csproj.CoreCompileInputs.cache
-D:\Code Samples\tickerq-sample\TickerqSourceGenerator\obj\Debug\netstandard2.0\TickerqSourceGenerator.sourcelink.json
-D:\Code Samples\tickerq-sample\TickerqSourceGenerator\obj\Debug\netstandard2.0\TickerqSourceGenerator.dll
-D:\Code Samples\tickerq-sample\TickerqSourceGenerator\obj\Debug\netstandard2.0\TickerqSourceGenerator.pdb
+D:/Code Samples/tickerq-sample/TickerqSourceGenerator/bin/Debug/netstandard2.0/TickerqSourceGenerator.deps.json
+D:/Code Samples/tickerq-sample/TickerqSourceGenerator/bin/Debug/netstandard2.0/TickerqSourceGenerator.dll
+D:/Code Samples/tickerq-sample/TickerqSourceGenerator/bin/Debug/netstandard2.0/TickerqSourceGenerator.pdb
+D:/Code Samples/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.0/TickerqSourceGenerator.csproj.AssemblyReference.cache
+D:/Code Samples/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.0/TickerqSourceGenerator.GeneratedMSBuildEditorConfig.editorconfig
+D:/Code Samples/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.0/TickerqSourceGenerator.AssemblyInfoInputs.cache
+D:/Code Samples/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.0/TickerqSourceGenerator.AssemblyInfo.cs
+D:/Code Samples/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.0/TickerqSourceGenerator.csproj.CoreCompileInputs.cache
+D:/Code Samples/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.0/TickerqSourceGenerator.sourcelink.json
+D:/Code Samples/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.0/TickerqSourceGenerator.dll
+D:/Code Samples/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.0/TickerqSourceGenerator.pdb
+/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/bin/Debug/netstandard2.0/TickerqSourceGenerator.deps.json
+/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/bin/Debug/netstandard2.0/TickerqSourceGenerator.dll
+/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/bin/Debug/netstandard2.0/TickerqSourceGenerator.pdb
+/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.0/TickerqSourceGenerator.csproj.AssemblyReference.cache
+/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.0/TickerqSourceGenerator.GeneratedMSBuildEditorConfig.editorconfig
+/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.0/TickerqSourceGenerator.AssemblyInfoInputs.cache
+/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.0/TickerqSourceGenerator.AssemblyInfo.cs
+/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.0/TickerqSourceGenerator.csproj.CoreCompileInputs.cache
+/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.0/TickerqSourceGenerator.sourcelink.json
+/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.0/TickerqSourceGenerator.dll
+/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSourceGenerator/obj/Debug/netstandard2.0/TickerqSourceGenerator.pdb

@@ -18,10 +18,9 @@ public class JobAutoRegistrationGenerator : ISourceGenerator
 
     public void Execute(GeneratorExecutionContext context)
     {
-        if (context.SyntaxReceiver is not SyntaxReceiver receiver) return;
+        if (!(context.SyntaxReceiver is SyntaxReceiver receiver)) return;
 
         var timeRegistrations = new List<string>();
-        var cronRegistrations = new List<string>();
         var compilation = context.Compilation;
 
         foreach (var methodDecl in receiver.Candidates)
@@ -30,49 +29,61 @@ public class JobAutoRegistrationGenerator : ISourceGenerator
                 continue;
 
             var model = compilation.GetSemanticModel(methodDecl.SyntaxTree);
-            var methodSymbol = model.GetDeclaredSymbol(methodDecl) as IMethodSymbol;
-            if (methodSymbol is null) continue;
+            var methodSymbol = model.GetDeclaredSymbol(methodDecl);
+            if (methodSymbol == null) continue;
 
             var attrs = methodSymbol.GetAttributes();
 
             // --- TickerFunction ---
-            var tickerAttr = attrs.FirstOrDefault(a => a.AttributeClass?.Name == "TickerFunctionAttribute");
-            if (tickerAttr is null) continue;
+            var tickerAttr = attrs.FirstOrDefault(a =>
+            {
+                var className = a.AttributeClass?.Name;
+                return className == "TickerFunctionAttribute" || className == "TickerFunction";
+            });
+            if (tickerAttr == null) continue;
 
             string functionName = methodSymbol.Name;
-            if (tickerAttr.ConstructorArguments.Length > 0)
+            if (tickerAttr.ConstructorArguments.Length > 0 &&
+                tickerAttr.ConstructorArguments[0].Kind == TypedConstantKind.Primitive &&
+                tickerAttr.ConstructorArguments[0].Value is string fn)
             {
-                var arg0 = tickerAttr.ConstructorArguments[0];
-                if (arg0.Kind == TypedConstantKind.Primitive && arg0.Value is string s)
-                    functionName = s;
+                functionName = fn;
             }
 
             // --- Cron detection ---
+            string cronExpr = "";
             var cronNamed = tickerAttr.NamedArguments.FirstOrDefault(kv => kv.Key == "cronExpression");
             if (!cronNamed.Equals(default(KeyValuePair<string, TypedConstant>)))
             {
-                if (cronNamed.Value.Kind == TypedConstantKind.Primitive && cronNamed.Value.Value is string cronStr)
+                if (cronNamed.Value.Kind == TypedConstantKind.Primitive && cronNamed.Value.Value is string s)
                 {
-                    cronRegistrations.Add(
-                        $"await cronManager.AddAsync(new CronTickerEntity {{ Function = \"{functionName}\", CronExpression = \"{EscapeString(cronStr)}\" }});"
-                    );
+                    cronExpr = $"\"{EscapeString(s)}\"";
                 }
                 else
                 {
-                    var raw = GetAttributeArgumentRawText(methodDecl, "TickerFunction", "cronExpression");
-                    if (!string.IsNullOrWhiteSpace(raw))
-                    {
-                        cronRegistrations.Add(
-                            $"await cronManager.AddAsync(new CronTickerEntity {{ Function = \"{functionName}\", CronExpression = {raw} }});"
-                        );
-                    }
+                    var rawText = GetAttributeArgumentRawText(methodDecl, "TickerFunction", "cronExpression");
+                    cronExpr = rawText ?? "";
                 }
-                continue; // skip TimeJob if cronExpression is present
+            }
+            else if (tickerAttr.ConstructorArguments.Length > 1 &&
+                     tickerAttr.ConstructorArguments[1].Kind == TypedConstantKind.Primitive &&
+                     tickerAttr.ConstructorArguments[1].Value is string s2)
+            {
+                cronExpr = $"\"{EscapeString(s2)}\"";
+            }
+
+            if (!string.IsNullOrEmpty(cronExpr))
+            {
+                continue;
             }
 
             // --- TimeJob detection ---
-            var timeAttr = attrs.FirstOrDefault(a => a.AttributeClass?.Name == "TimeJobAttribute");
-            if (timeAttr is null) continue;
+            var timeAttr = attrs.FirstOrDefault(a =>
+            {
+                var className = a.AttributeClass?.Name;
+                return className == "TimeJobAttribute" || className == "TimeJob";
+            });
+            if (timeAttr == null) continue;
 
             string executionExpr = "DateTime.UtcNow";
 
@@ -90,11 +101,11 @@ public class JobAutoRegistrationGenerator : ISourceGenerator
                         executionExpr = raw;
                 }
             }
-            else if (timeAttr.ConstructorArguments.Length > 0)
+            else if (timeAttr.ConstructorArguments.Length > 0 &&
+                     timeAttr.ConstructorArguments[0].Kind == TypedConstantKind.Primitive &&
+                     timeAttr.ConstructorArguments[0].Value is int sec)
             {
-                var a0 = timeAttr.ConstructorArguments[0];
-                if (a0.Kind == TypedConstantKind.Primitive && a0.Value is int sec)
-                    executionExpr = sec == 0 ? "DateTime.UtcNow" : $"DateTime.UtcNow.AddSeconds({sec})";
+                executionExpr = sec == 0 ? "DateTime.UtcNow" : $"DateTime.UtcNow.AddSeconds({sec})";
             }
 
             timeRegistrations.Add(
@@ -102,9 +113,9 @@ public class JobAutoRegistrationGenerator : ISourceGenerator
             );
         }
 
-        if (timeRegistrations.Count == 0 && cronRegistrations.Count == 0)
+        if (timeRegistrations.Count == 0)
         {
-            context.AddSource("Job_Debug.g.cs", SourceText.From("// No jobs found", Encoding.UTF8));
+            context.AddSource("JobRegistrationService.Jobs.g.cs", SourceText.From("// No jobs found", Encoding.UTF8));
             return;
         }
 
@@ -120,25 +131,18 @@ public class JobAutoRegistrationGenerator : ISourceGenerator
                 public partial class JobRegistrationService
                 {
                     partial void RegisterJobs(
-                        ITimeTickerManager<TimeTickerEntity> timeManager,
-                        ICronTickerManager<CronTickerEntity> cronManager)
+                        ITimeTickerManager<TimeTickerEntity> timeManager)
                     {
-                        _ = RegisterJobsAsync(timeManager, cronManager);
+                        _ = RegisterJobsAsync(timeManager);
                     }
 
                     private async Task RegisterJobsAsync(
-                        ITimeTickerManager<TimeTickerEntity> timeManager,
-                        ICronTickerManager<CronTickerEntity> cronManager)
+                        ITimeTickerManager<TimeTickerEntity> timeManager)
                     {
                         try
                         {
                             // Time jobs
                             {{string.Join("\n                            ", timeRegistrations)}}
-
-                            // Cron jobs
-                            {{string.Join("\n                            ", cronRegistrations)}}
-
-                            Console.WriteLine("[Jobs] SUCCESS: Registered {{timeRegistrations.Count}} time job(s) and {{cronRegistrations.Count}} cron job(s)");
                         }
                         catch (Exception ex)
                         {
@@ -152,7 +156,7 @@ public class JobAutoRegistrationGenerator : ISourceGenerator
         context.AddSource("JobRegistrationService.Jobs.g.cs", SourceText.From(source, Encoding.UTF8));
     }
 
-    private static string? GetAttributeArgumentRawText(MethodDeclarationSyntax methodDecl, string attributeSimpleName, string namedArgument)
+    private static string GetAttributeArgumentRawText(MethodDeclarationSyntax methodDecl, string attributeSimpleName, string namedArgument)
     {
         var attr = methodDecl.AttributeLists
             .SelectMany(al => al.Attributes)
@@ -162,12 +166,11 @@ public class JobAutoRegistrationGenerator : ISourceGenerator
                 return name.EndsWith(attributeSimpleName) || name.EndsWith(attributeSimpleName + "Attribute");
             });
 
-        if (attr?.ArgumentList is null) return null;
+        if (attr == null || attr.ArgumentList == null) return null;
 
         foreach (var arg in attr.ArgumentList.Arguments)
         {
-            var name = arg.NameEquals?.Name.Identifier.Text;
-            if (name == namedArgument)
+            if (arg.NameEquals != null && arg.NameEquals.Name.Identifier.Text == namedArgument)
                 return arg.Expression.ToString();
         }
         return null;
@@ -178,16 +181,12 @@ public class JobAutoRegistrationGenerator : ISourceGenerator
 
     class SyntaxReceiver : ISyntaxReceiver
     {
-        public List<MethodDeclarationSyntax> Candidates { get; } = new();
+        public List<MethodDeclarationSyntax> Candidates { get; } = new List<MethodDeclarationSyntax>();
 
         public void OnVisitSyntaxNode(SyntaxNode node)
         {
-            if (node is MethodDeclarationSyntax m &&
-                m.AttributeLists.Count > 0 &&
-                m.Modifiers.Any(SyntaxKind.StaticKeyword))
-            {
+            if (node is MethodDeclarationSyntax m && m.AttributeLists.Count > 0)
                 Candidates.Add(m);
-            }
         }
     }
 }

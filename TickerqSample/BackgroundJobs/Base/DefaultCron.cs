@@ -11,19 +11,19 @@ public abstract class DefaultCron
     /// Every 10 seconds
     public const string Every10Seconds = "*/10 * * * * *";
     
-    /// Every minute
-    public const string EveryMinute = "* * * * *";
+    /// Every minute (at second 0)
+    public const string EveryMinute = "0 * * * * *";
     
-    /// Every 5 minutes
-    public const string Every5Minutes = "*/5 * * * *";
+    /// Every 5 minutes (at second 0)
+    public const string Every5Minutes = "0 */5 * * * *";
     
-    /// Every 10 minutes
-    public const string Every10Minutes = "*/10 * * * *";
+    /// Every 10 minutes (at second 0)
+    public const string Every10Minutes = "0 */10 * * * *";
     
-    /// Hourly, at minute 0
-    public const string EveryHour = "0 * * * *";
+    /// Hourly, at minute 0 (at second 0)
+    public const string EveryHour = "0 0 * * * *";
     
-    /// Daily at midnight
+    /// Daily at midnight (00:00:00)
     public const string DailyMidnight = "0 0 0 * * *";
     
     /// Daily at 9:00 AM
@@ -32,7 +32,7 @@ public abstract class DefaultCron
     /// Daily at 6:00 PM
     public const string Daily6Pm = "0 0 18 * * *";
     
-    /// Every 6 hours
+    /// Every 6 hours (at second 0, minute 0)
     public const string Every6Hours = "0 0 */6 * * *";
     
     /// At 9 AM and 5 PM daily

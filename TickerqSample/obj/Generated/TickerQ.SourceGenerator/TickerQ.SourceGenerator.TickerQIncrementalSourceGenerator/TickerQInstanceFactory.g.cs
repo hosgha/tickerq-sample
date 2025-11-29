@@ -18,7 +18,7 @@ namespace TickerqSample
         public static void Initialize()
         {
             var tickerFunctionDelegateDict = new Dictionary<string, (string, TickerTaskPriority, TickerFunctionDelegate)>(2);
-            tickerFunctionDelegateDict.TryAdd("TestCronTickerBasedJob", ("* * * * *", (TickerTaskPriority)2, new TickerFunctionDelegate(async (cancellationToken, serviceProvider, context) =>
+            tickerFunctionDelegateDict.TryAdd("TestCronTickerBasedJob", ("0 * * * * *", (TickerTaskPriority)2, new TickerFunctionDelegate(async (cancellationToken, serviceProvider, context) =>
             {
                 await TickerqSample.BackgroundJobs.CronJobs.TestCronTickerBasedJob.CronJobEveryMinuteTest(context, cancellationToken);
             })));

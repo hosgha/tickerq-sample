@@ -1,26 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Code Samples\\tickerq-sample\\TickerqSample\\TickerqSample.csproj": {}
+    "/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSample/TickerqSample.csproj": {}
   },
   "projects": {
-    "D:\\Code Samples\\tickerq-sample\\TickerqSample\\TickerqSample.csproj": {
+    "/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSample/TickerqSample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Code Samples\\tickerq-sample\\TickerqSample\\TickerqSample.csproj",
+        "projectUniqueName": "/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSample/TickerqSample.csproj",
         "projectName": "TickerqSample",
-        "projectPath": "D:\\Code Samples\\tickerq-sample\\TickerqSample\\TickerqSample.csproj",
-        "packagesPath": "C:\\Users\\h.ghasemi\\.nuget\\packages\\",
-        "outputPath": "D:\\Code Samples\\tickerq-sample\\TickerqSample\\obj\\",
+        "projectPath": "/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSample/TickerqSample.csproj",
+        "packagesPath": "/Users/husseinghasemi/.nuget/packages/",
+        "outputPath": "/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSample/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\h.ghasemi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/husseinghasemi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "D:\\Projects\\DevExpress-23.1.6-nuget": {},
+          "/Users/husseinghasemi/Documents/Programming/Vira/LocalNugetFeed": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,7 +39,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -91,6 +91,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.20, 8.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-arm64",
+              "version": "[8.0.20, 8.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.20, 8.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -99,7 +113,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

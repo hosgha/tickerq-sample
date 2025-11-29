@@ -9,25 +9,18 @@ namespace TickerqSample.BackgroundJobs.Base
     public partial class JobRegistrationService
     {
         partial void RegisterJobs(
-            ITimeTickerManager<TimeTickerEntity> timeManager,
-            ICronTickerManager<CronTickerEntity> cronManager)
+            ITimeTickerManager<TimeTickerEntity> timeManager)
         {
-            _ = RegisterJobsAsync(timeManager, cronManager);
+            _ = RegisterJobsAsync(timeManager);
         }
 
         private async Task RegisterJobsAsync(
-            ITimeTickerManager<TimeTickerEntity> timeManager,
-            ICronTickerManager<CronTickerEntity> cronManager)
+            ITimeTickerManager<TimeTickerEntity> timeManager)
         {
             try
             {
                 // Time jobs
                 await timeManager.AddAsync(new TimeTickerEntity { Function = "TestTimeBasedJob", ExecutionTime = DateTime.UtcNow.AddSeconds(10) });
-
-                // Cron jobs
-                
-
-                Console.WriteLine("[Jobs] SUCCESS: Registered 1 time job(s) and 0 cron job(s)");
             }
             catch (Exception ex)
             {
