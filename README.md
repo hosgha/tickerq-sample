@@ -20,15 +20,22 @@ It introduces **time-based scheduling attributes** and generates the required jo
 
 > ⚠️ **Note**: Cron support through unified `TickerFunctionAttribute` is planned as the next major enhancement.
 
-## 📦 Installation
+## 🎯 Quick Start
 
-Add the generator to your project:
+### Database Setup
 
-```xml
-<PackageReference Include="TickerQSourceGenerator" Version="1.0.0" />
+Migrations
+TickerQ uses Entity Framework Core for job storage. To set up the database:
+
+1. Create a new migration
+```bash
+dotnet ef migrations add InitialCreate --project TickerqSample --context TickerQDbContext --output-dir Migrations
 ```
 
-## 🎯 Quick Start
+2. Update the database
+```bash
+dotnet ef database update --project TickerqSample
+```
 
 ### 1. Define your jobs with attributes
 
