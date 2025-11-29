@@ -1,4 +1,8 @@
-﻿using TickerqSample.BackgroundJobs;
+﻿using System;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using TickerqSample.BackgroundJobs;
 using TickerqSample.BackgroundJobs.Base;
 
 namespace TickerqSample.ServiceExtensions;

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CrjIj5W4Lhw=",
+  "dgSpecHash": "k6ZZCbZDrDs=",
   "success": true,
   "projectFilePath": "/Users/husseinghasemi/Documents/Programming/Vira/tickerq-sample/TickerqSample/TickerqSample.csproj",
   "expectedPackageFiles": [
@@ -102,7 +102,10 @@
     "/Users/husseinghasemi/.nuget/packages/tickerq/8.0.0-beta.10/tickerq.8.0.0-beta.10.nupkg.sha512",
     "/Users/husseinghasemi/.nuget/packages/tickerq.dashboard/8.0.0-beta.10/tickerq.dashboard.8.0.0-beta.10.nupkg.sha512",
     "/Users/husseinghasemi/.nuget/packages/tickerq.entityframeworkcore/8.0.0-beta.10/tickerq.entityframeworkcore.8.0.0-beta.10.nupkg.sha512",
-    "/Users/husseinghasemi/.nuget/packages/tickerq.utilities/8.0.0-beta.10/tickerq.utilities.8.0.0-beta.10.nupkg.sha512"
+    "/Users/husseinghasemi/.nuget/packages/tickerq.utilities/8.0.0-beta.10/tickerq.utilities.8.0.0-beta.10.nupkg.sha512",
+    "/Users/husseinghasemi/.nuget/packages/microsoft.netcore.app.ref/8.0.20/microsoft.netcore.app.ref.8.0.20.nupkg.sha512",
+    "/Users/husseinghasemi/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.20/microsoft.aspnetcore.app.ref.8.0.20.nupkg.sha512",
+    "/Users/husseinghasemi/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.20/microsoft.netcore.app.host.osx-arm64.8.0.20.nupkg.sha512"
   ],
   "logs": []
 }

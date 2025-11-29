@@ -1,33 +1,27 @@
-﻿using TickerQ.Utilities.Entities;
+﻿// JobRegistrationService.cs
+using System;
+using System.Threading.Tasks;
+using TickerQ.Utilities.Entities;
 using TickerQ.Utilities.Interfaces.Managers;
-using TickerqSample.BackgroundJobs.CronJobs;
-using TickerqSample.BackgroundJobs.TimeJobs;
 
 namespace TickerqSample.BackgroundJobs.Base;
+
 public interface IJobRegistrationService
 {
     Task RegisterJobsAsync();
 }
 
-public class JobRegistrationService(
-    ITimeTickerManager<TimeTickerEntity> timeManager,
-    ICronTickerManager<CronTickerEntity> cronManager)
+public partial class JobRegistrationService(
+    ITimeTickerManager<TimeTickerEntity> timeManager)
     : IJobRegistrationService
 {
-    public async Task RegisterJobsAsync()
+    public Task RegisterJobsAsync()
     {
-        try
-        {
-                await timeManager.AddAsync(new TimeTickerEntity {Function = JobSchedulerConstants.TimeJobs.TimeBasedJobTest, ExecutionTime = DateTime.UtcNow.AddSeconds(5)});
-            
-                await cronManager.AddAsync(new CronTickerEntity {Function = JobSchedulerConstants.CronJobs.CronBasedJobTest, Expression = JobSchedulerConstants.DefaultCron.EveryMinute});
+        RegisterJobs(timeManager);
 
-            Console.WriteLine("✅ TickerQ jobs registered successfully");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"❌ Error registering TickerQ jobs: {ex.Message}");
-            throw;
-        }
+        Console.WriteLine("Time-based jobs registration triggered.");
+        return Task.CompletedTask;
     }
+    
+    partial void RegisterJobs(ITimeTickerManager<TimeTickerEntity> timeManager);
 }

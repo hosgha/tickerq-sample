@@ -1,6 +1,3 @@
 namespace TickerqSample.BackgroundJobs.Base;
 
-public interface ITimeTickerJob
-{
-    
-}
+public interface ITimeTickerJob { }
